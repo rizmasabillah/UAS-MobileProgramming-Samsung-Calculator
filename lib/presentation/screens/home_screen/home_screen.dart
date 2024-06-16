@@ -411,30 +411,28 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ),
                   Flexible(
-                    child: Container(
-                      child: GridView.count(
-                          childAspectRatio: 1.15,
-                          crossAxisCount: 1,
-                          mainAxisSpacing: 10,
-                          padding: const EdgeInsets.all(5),
-                          physics: const NeverScrollableScrollPhysics(),
-                          children: List.generate(
-                            buttonOperatorsGrid.length,
-                            (index) {
-                              final gridItemData = buttonOperatorsGrid[index];
-                              return CustomButton(
-                                textEditingController: mathExpressionController,
-                                buttonData: gridItemData,
-                                positionAnimationController:
-                                    _positionAnimationController,
-                                visibilityAnimationController:
-                                    _visibilityAnimationController,
-                                colorAnimationController:
-                                    _colorAnimationController,
-                              );
-                            },
-                          )),
-                    ),
+                    child: GridView.count(
+                        childAspectRatio: 1.15,
+                        crossAxisCount: 1,
+                        mainAxisSpacing: 10,
+                        padding: const EdgeInsets.all(5),
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: List.generate(
+                          buttonOperatorsGrid.length,
+                          (index) {
+                            final gridItemData = buttonOperatorsGrid[index];
+                            return CustomButton(
+                              textEditingController: mathExpressionController,
+                              buttonData: gridItemData,
+                              positionAnimationController:
+                                  _positionAnimationController,
+                              visibilityAnimationController:
+                                  _visibilityAnimationController,
+                              colorAnimationController:
+                                  _colorAnimationController,
+                            );
+                          },
+                        )),
                   ),
                 ],
               )),

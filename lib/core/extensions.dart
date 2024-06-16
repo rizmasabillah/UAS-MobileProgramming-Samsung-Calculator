@@ -71,7 +71,7 @@ extension ValidExpression on String {
     final data = split(regExpMatchContainsOperator);
     final bracket = replaceAll(RegExp(r'([\+\-\x/\÷\%/*./÷/0-9])'), '');
     final closedBrackets = bracket.split('').where((element) => element == ')');
-    final openedBrackets = bracket.split('').where((element) => element == '(');
+    bracket.split('').where((element) => element == '(');
     int numOfClosingBrackets = 0;
 
     for (int i = 0; i < data.length; i++) {
@@ -98,8 +98,7 @@ extension FormatExpression on String {
         .allMatches(this)
         .map((e) => e.group(0))
         .toList();
-    final numericExpressionParts =
-        replaceAll(',', '').split(regExpMatchOnlyNumbersEulerAndDecimal);
+    replaceAll(',', '').split(regExpMatchOnlyNumbersEulerAndDecimal);
     final formattedExpressionPartWithOperators = [];
     int operatorsIndex = 0;
 

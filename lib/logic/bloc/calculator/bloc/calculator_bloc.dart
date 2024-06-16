@@ -159,7 +159,9 @@ String calculateExpression(String expression, bool calculateInRad) {
       }
     }
   } catch (e) {
-    print('Error: $e');
+    if (kDebugMode) {
+      print('Error: $e');
+    }
     return '';
   }
 }
